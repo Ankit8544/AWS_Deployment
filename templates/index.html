@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Video Scraper</title>
+    <style>
+        /* Your CSS code goes here */
+        /* Reset some default styles */
+        body, h1, p, form {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply some basic styling to the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        /* Style the header */
+        h1 {
+            background-color: #fe0000;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the paragraph */
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the form container */
+        form {
+            background-color: #d9f494;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(255, 0, 0, 0.1);
+        }
+
+        /* Style the input field */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ec0404;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the YouTube Video Scraper</h1>
+    <p>Enter a YouTube channel name or username to scrape their videos:</p>
+    <form action="/api/videos" method="POST">
+        <input type="text" name="content" placeholder="Enter channel name or username" required>
+        <input type="submit" value="Scrape Videos">
+    </form>
+</body>
+</html>

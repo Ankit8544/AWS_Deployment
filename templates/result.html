@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>  
+   <title>YouTube Video Scraper</title>
+   <style>
+       /* Your CSS code goes here */
+       /* Reset some default styles */
+       body, h1, p, form {
+           margin: 0;
+           padding: 0;
+       }
+
+       /* Apply some basic styling to the body */
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #f2f2f2;
+           text-align: center;
+       }
+
+       /* Style the header */
+       h1 {
+           background-color: #333;
+           color: white;
+           padding: 20px;
+           margin-bottom: 20px;
+       }
+
+       /* Style the form container */
+       form {
+           background-color: #fff;
+           border-radius: 5px;
+           padding: 20px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+
+       /* Style the input field */
+       input[type="text"] {
+           width: 100%;
+           padding: 10px;
+           margin-bottom: 10px;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+           font-size: 16px;
+       }
+
+       /* Style the submit button */
+       input[type="submit"] {
+           background-color: #333;
+           color: white;
+           padding: 10px 20px;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           font-size: 16px;
+       }
+
+       /* Style the table */
+       table {
+           width: 100%;
+           border-collapse: collapse;
+           margin-top: 20px;
+       }
+
+       /* Style table header */
+       th {
+           background-color: #333;
+           color: white;
+           padding: 10px;
+       }
+
+       /* Style table data rows */
+       td {
+           padding: 10px;
+           text-align: center;
+       }
+
+       /* Style table data links */
+       a {
+           color: #333;
+           text-decoration: none;
+       }
+   </style>
+</head>
+<body>
+    <h1>Scraped Videos</h1>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>Video Title</th>
+                <th>Thumbnail</th>
+                <th>Video URL</th>
+                <th>View Count</th>
+                <th>Uploaded Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for video in reviews %}
+            <tr>
+                <td>{{ video['Videos_Title'] }}</td>
+                <td>{{ video['Videos_Thumbnail'] }}</td>
+                <td>{{ video['Videos_URL'] }}</td>
+                <td>{{ video['Videos_Viewcount'] }}</td>
+                <td>{{ video['Videos_Uploaded'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
